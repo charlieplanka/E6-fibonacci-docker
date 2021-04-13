@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM python:3.8
 ENV PORT 8081
 COPY ./requirements.txt /app/requirements.txt
 WORKDIR /app
