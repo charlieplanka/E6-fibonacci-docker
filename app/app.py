@@ -11,10 +11,11 @@ memcache_client = base.Client(("localhost", 11211))
 
 @app.route('/<num>')
 def get_fibo_num(num):
-    fibo = memcache_client.get(num)
+    # fibo = memcache_client.get(num)
+    fibo = None
     if fibo is None:
         fibo = count_fibo_num(int(num))        
-        memcache_client.set(num, fibo)
+        # memcache_client.set(num, fibo)
     return jsonify(fibo=int(fibo)), 200
 
 def count_fibo_num(num):
