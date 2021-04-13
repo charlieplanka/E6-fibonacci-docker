@@ -6,7 +6,7 @@ import os
 
 app = Flask(__name__)
 memcache_client = base.Client(("localhost", 11211))
-port = int(os.environ.get("PORT", 5000))
+# port = int(os.environ.get("PORT", 5000))
 
 
 @app.route('/<num>')
@@ -24,5 +24,5 @@ def count_fibo_num(num):
     return fibo
 
 
-if __name__ == '__main__':
-    app.run(debug=True, host='127.0.0.1', port=port)
+# if __name__ == '__main__':
+#     app.run(debug=True, host='127.0.0.1', port=port)
