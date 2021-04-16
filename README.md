@@ -21,3 +21,5 @@ sudo docker-compose build
 ```
 sudo docker-compose up
 ```
+
+По умолчанию приложение запускается на 5000 порту.
