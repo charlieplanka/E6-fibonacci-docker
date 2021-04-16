@@ -1,7 +1,10 @@
 FROM python:3.8
-COPY ./requirements.txt /app/requirements.txt
 WORKDIR /app
+
+COPY requirements.txt ./app
+COPY ./app /app
+
 RUN pip install -r requirements.txt
-COPY ./app/app.py /app/app.py
+
 ENTRYPOINT ["flask"]
 CMD ["run"]
